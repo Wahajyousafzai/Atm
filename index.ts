@@ -60,12 +60,12 @@ let Input :answers  = await inquirer.prompt([
 
 const { userId, pin,cashAmount} = Input;
 
-const Balance = Math.floor(Math.random() * 1000000)
+const Balance = 50000
 if(userId && pin && cashAmount ){
-    console.log(Balance)
-    if(Balance > cashAmount){
+    // console.log(Balance)
+    if(Balance >= cashAmount){
         let CurrentBalance = Balance - cashAmount;
-        console.log(`Transaction Successfu. \nYour CurrentBalance is ${CurrentBalance}`);
+        console.log(`Transaction Successfull. \nYour Current Balance is ${CurrentBalance}`);
     } else {
         console.log("Insuficient Balance");
     }
